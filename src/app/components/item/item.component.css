@@ -1,0 +1,52 @@
+.container {
+  max-width: 600px; 
+  margin: 0 auto; 
+  padding: 1rem; 
+}
+
+ul {
+  list-style-type: none; 
+  padding: 0; 
+}
+
+li {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 0.5rem 0; 
+  border-bottom: 1px solid #ccc; 
+}
+
+button {
+  background-color: #28A745; 
+  color: white; 
+  border: none; 
+  padding: 0.5rem 1rem; 
+  cursor: pointer; 
+  border-radius: 4px; 
+}
+
+button:hover {
+  background-color: #218838; 
+}
+
+.error-message {
+  color: red; 
+  margin-bottom: 1rem; 
+}
+
+@media (max-width: 600px) {
+  li {
+      flex-direction: column; 
+      align-items: flex-start; 
+  }
+
+  button {
+      width: 100%; 
+      margin-top: 0.5rem; 
+  }
+
+  .container {
+      padding: 0.5rem; 
+  }
+}

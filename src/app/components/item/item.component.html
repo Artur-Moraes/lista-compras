@@ -1,0 +1,22 @@
+<div>
+  <input #itemInput type="text" placeholder="Adicione um item" />
+  <button (click)="addItem(itemInput.value)">Adicionar</button>
+
+  <h2>Itens Não Comprados</h2>
+  <ul>
+    <li *ngFor="let item of unpurchasedItems">
+      {{ item.name }}
+      <button (click)="togglePurchased(item.id)">Marcar como comprado</button>
+      <button (click)="deleteItem(item.id)">Excluir</button>
+    </li>
+  </ul>
+
+  <h2 *ngIf="purchasedItems.length > 0">Itens Comprados</h2>
+  <ul>
+    <li *ngFor="let item of purchasedItems">
+      {{ item.name }}
+      <button (click)="togglePurchased(item.id)">Marcar como não comprado</button>
+      <button (click)="deleteItem(item.id)">Excluir</button>
+    </li>
+  </ul>
+</div>
